@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A060369299BEE760089B5E6 /* Color+AppStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A060368299BEE760089B5E6 /* Color+AppStorage.swift */; };
+		8A06036B299BEF710089B5E6 /* AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A06036A299BEF710089B5E6 /* AppIcon.swift */; };
+		8A06036E299C083F0089B5E6 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A06036D299C083F0089B5E6 /* Contents.json */; };
 		8A97DDB3299BCF29001E25E1 /* ColorPickerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A97DDB2299BCF29001E25E1 /* ColorPickerApp.swift */; };
 		8A97DDB5299BCF29001E25E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A97DDB4299BCF29001E25E1 /* ContentView.swift */; };
 		8A97DDB7299BCF2B001E25E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A97DDB6299BCF2B001E25E1 /* Assets.xcassets */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A060368299BEE760089B5E6 /* Color+AppStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+AppStorage.swift"; sourceTree = "<group>"; };
+		8A06036A299BEF710089B5E6 /* AppIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIcon.swift; sourceTree = "<group>"; };
+		8A06036D299C083F0089B5E6 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		8A97DDAF299BCF29001E25E1 /* ColorPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A97DDB2299BCF29001E25E1 /* ColorPickerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerApp.swift; sourceTree = "<group>"; };
 		8A97DDB4299BCF29001E25E1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A06036C299C08300089B5E6 /* AppIconSetResources */ = {
+			isa = PBXGroup;
+			children = (
+				8A06036D299C083F0089B5E6 /* Contents.json */,
+			);
+			path = AppIconSetResources;
+			sourceTree = "<group>";
+		};
 		8A97DDA6299BCF29001E25E1 = {
 			isa = PBXGroup;
 			children = (
@@ -95,10 +109,13 @@
 		8A97DDB1299BCF29001E25E1 /* ColorPicker */ = {
 			isa = PBXGroup;
 			children = (
+				8A06036C299C08300089B5E6 /* AppIconSetResources */,
+				8A97DDBB299BCF2B001E25E1 /* ColorPicker.entitlements */,
+				8A06036A299BEF710089B5E6 /* AppIcon.swift */,
+				8A060368299BEE760089B5E6 /* Color+AppStorage.swift */,
 				8A97DDB2299BCF29001E25E1 /* ColorPickerApp.swift */,
 				8A97DDB4299BCF29001E25E1 /* ContentView.swift */,
 				8A97DDB6299BCF2B001E25E1 /* Assets.xcassets */,
-				8A97DDBB299BCF2B001E25E1 /* ColorPicker.entitlements */,
 				8A97DDB8299BCF2B001E25E1 /* Preview Content */,
 			);
 			path = ColorPicker;
@@ -235,6 +252,7 @@
 			files = (
 				8A97DDBA299BCF2B001E25E1 /* Preview Assets.xcassets in Resources */,
 				8A97DDB7299BCF2B001E25E1 /* Assets.xcassets in Resources */,
+				8A06036E299C083F0089B5E6 /* Contents.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +278,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A97DDB5299BCF29001E25E1 /* ContentView.swift in Sources */,
+				8A060369299BEE760089B5E6 /* Color+AppStorage.swift in Sources */,
+				8A06036B299BEF710089B5E6 /* AppIcon.swift in Sources */,
 				8A97DDB3299BCF29001E25E1 /* ColorPickerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

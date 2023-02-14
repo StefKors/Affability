@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import AppKit
 
 @main
 struct ColorPickerApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-        }
+        }.windowResizability(.contentMinSize)
+
     }
 }
