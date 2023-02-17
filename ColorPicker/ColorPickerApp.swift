@@ -15,5 +15,10 @@ struct ColorPickerApp: App {
             ContentView()
         }.windowResizability(.contentMinSize)
 
+        WindowGroup(for: Color.ID.self) { $icon in
+            if let color = $icon.wrappedValue {
+                AppIconContentView(color: color)
+            }
+        }
     }
 }
