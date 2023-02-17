@@ -125,12 +125,12 @@
 		8A97DDA6299BCF29001E25E1 = {
 			isa = PBXGroup;
 			children = (
-				8AC9B5D3299FCB6C003A4D55 /* Images */,
-				8AC9B5D1299FCAF3003A4D55 /* README.md */,
 				8A97DDB1299BCF29001E25E1 /* ColorPicker */,
 				8A97DDC3299BCF2B001E25E1 /* ColorPickerTests */,
 				8A97DDCD299BCF2B001E25E1 /* ColorPickerUITests */,
+				8AC9B5D3299FCB6C003A4D55 /* Images */,
 				8A97DDB0299BCF29001E25E1 /* Products */,
+				8AC9B5D1299FCAF3003A4D55 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
