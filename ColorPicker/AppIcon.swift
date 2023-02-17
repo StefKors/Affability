@@ -14,6 +14,7 @@ struct AppIcon: View {
     static let defaultSize: CGFloat = 130
 
     var body: some View {
+        let padd: CGFloat = size >= 256 ? 20 : 12
         RoundedRectangle(cornerRadius: size*0.1, style: .circular)
             .fill(color)
             .shadow(color: .black.opacity(0.2), radius: size*0.015, y: size*0.015)
@@ -44,8 +45,8 @@ struct AppIcon: View {
                 .padding(size*0.1)
             }
             .clipShape(RoundedRectangle(cornerRadius: size*0.15, style: .continuous))
-            .padding(12)
-            .shadow(color: .black.lighter(by: 30).opacity(0.5), radius: size*0.023, y: -size*0.023)
+            .padding(padd)
+            .shadow(color: .black.lighter(by: 30).opacity(0.3), radius: size*0.011, y: -size*0.021)
             .frame(width: size, height: size)
             // .scaledToFit()
             // .shadow(radius: 20, y: 10)
