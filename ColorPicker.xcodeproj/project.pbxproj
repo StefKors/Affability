@@ -22,6 +22,7 @@
 		8A97DDC5299BCF2B001E25E1 /* ColorPickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A97DDC4299BCF2B001E25E1 /* ColorPickerTests.swift */; };
 		8A97DDCF299BCF2B001E25E1 /* ColorPickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A97DDCE299BCF2B001E25E1 /* ColorPickerUITests.swift */; };
 		8A97DDD1299BCF2B001E25E1 /* ColorPickerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A97DDD0299BCF2B001E25E1 /* ColorPickerUITestsLaunchTests.swift */; };
+		8AC44F032A080FB20016FFEC /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC44F022A080FB20016FFEC /* Haptics.swift */; };
 		8AC9B5D2299FCAF3003A4D55 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9B5D1299FCAF3003A4D55 /* README.md */; };
 		8AC9B5E0299FCB6C003A4D55 /* Screenshot-dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9B5D4299FCB6C003A4D55 /* Screenshot-dark.png */; };
 		8AC9B5E1299FCB6C003A4D55 /* watchos.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9B5D5299FCB6C003A4D55 /* watchos.svg */; };
@@ -74,6 +75,7 @@
 		8A97DDCA299BCF2B001E25E1 /* ColorPickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorPickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A97DDCE299BCF2B001E25E1 /* ColorPickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerUITests.swift; sourceTree = "<group>"; };
 		8A97DDD0299BCF2B001E25E1 /* ColorPickerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8AC44F022A080FB20016FFEC /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
 		8AC9B5D1299FCAF3003A4D55 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8AC9B5D4299FCB6C003A4D55 /* Screenshot-dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot-dark.png"; sourceTree = "<group>"; };
 		8AC9B5D5299FCB6C003A4D55 /* watchos.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = watchos.svg; sourceTree = "<group>"; };
@@ -147,19 +149,11 @@
 		8A97DDB1299BCF29001E25E1 /* ColorPicker */ = {
 			isa = PBXGroup;
 			children = (
-				8A06036C299C08300089B5E6 /* AppIconSetResources */,
+				8AD49F8B2A1CDF0E00AD5321 /* Views */,
 				8A97DDBB299BCF2B001E25E1 /* ColorPicker.entitlements */,
-				8A06036A299BEF710089B5E6 /* AppIcon.swift */,
-				8A060368299BEE760089B5E6 /* Color+AppStorage.swift */,
 				8A97DDB2299BCF29001E25E1 /* ColorPickerApp.swift */,
-				8A06036F299CFA680089B5E6 /* AppIconContentView.swift */,
-				8A97DDB4299BCF29001E25E1 /* ContentView.swift */,
-				8A060377299D022A0089B5E6 /* Color+Extensions.swift */,
 				8A97DDB6299BCF2B001E25E1 /* Assets.xcassets */,
 				8A97DDB8299BCF2B001E25E1 /* Preview Content */,
-				8A060371299D011F0089B5E6 /* AppIconSetMaker.swift */,
-				8A060373299D013B0089B5E6 /* FormattedView.swift */,
-				8A060375299D01500089B5E6 /* InlineView.swift */,
 			);
 			path = ColorPicker;
 			sourceTree = "<group>";
@@ -206,6 +200,23 @@
 				8AC9B5DF299FCB6C003A4D55 /* tvos-active.svg */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		8AD49F8B2A1CDF0E00AD5321 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8A06036C299C08300089B5E6 /* AppIconSetResources */,
+				8A06036A299BEF710089B5E6 /* AppIcon.swift */,
+				8A060368299BEE760089B5E6 /* Color+AppStorage.swift */,
+				8A06036F299CFA680089B5E6 /* AppIconContentView.swift */,
+				8A97DDB4299BCF29001E25E1 /* ContentView.swift */,
+				8AC44F022A080FB20016FFEC /* Haptics.swift */,
+				8A060377299D022A0089B5E6 /* Color+Extensions.swift */,
+				8A060371299D011F0089B5E6 /* AppIconSetMaker.swift */,
+				8A060373299D013B0089B5E6 /* FormattedView.swift */,
+				8A060375299D01500089B5E6 /* InlineView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +365,7 @@
 			files = (
 				8A97DDB5299BCF29001E25E1 /* ContentView.swift in Sources */,
 				8A060369299BEE760089B5E6 /* Color+AppStorage.swift in Sources */,
+				8AC44F032A080FB20016FFEC /* Haptics.swift in Sources */,
 				8A060374299D013B0089B5E6 /* FormattedView.swift in Sources */,
 				8A06036B299BEF710089B5E6 /* AppIcon.swift in Sources */,
 				8A060370299CFA680089B5E6 /* AppIconContentView.swift in Sources */,

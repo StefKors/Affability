@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FormattedView: View {
+    @AppStorage("showAlpha") private var showAlpha: Bool = false
     var parts: [CGFloat]
 
     var body: some View {
@@ -39,16 +40,20 @@ struct FormattedView: View {
                     Text("blue").foregroundColor(.blue)
                     Text(": ")
                     Text(num(parts[2])).foregroundColor(.green)
-                    Text(", ")
+                    if showAlpha {
+                        Text(", ")
+                    }
                 }
             }.padding(.leading)
-            VStack(alignment: .leading, spacing: 0) {
-                HStack(spacing: 0) {
-                    Text("alpha").foregroundColor(.blue)
-                    Text(": ")
-                    Text(num(parts[3])).foregroundColor(.green)
-                }
-            }.padding(.leading)
+            if showAlpha {
+                VStack(alignment: .leading, spacing: 0) {
+                    HStack(spacing: 0) {
+                        Text("alpha").foregroundColor(.blue)
+                        Text(": ")
+                        Text(num(parts[3])).foregroundColor(.green)
+                    }
+                }.padding(.leading)
+            }
             VStack(alignment: .leading, spacing: 0) {
                 HStack(spacing: 0) {
                     Text(")")

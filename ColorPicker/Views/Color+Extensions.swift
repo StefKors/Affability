@@ -107,13 +107,22 @@ extension Color: Identifiable {
 
 
 extension Color {
-    var pasteboardText: String {
+    var pasteboardTextWithAlpha: String {
         if let parts = NSColor(self).cgColor.components {
             return "Color(red: \(num(parts[0])), green: \(num(parts[1])), blue: \(num(parts[2])), alpha: \(num(parts[3])))"
         } else {
             return self.description
         }
     }
+
+    var pasteboardText: String {
+        if let parts = NSColor(self).cgColor.components {
+            return "Color(red: \(num(parts[0])), green: \(num(parts[1])), blue: \(num(parts[2])))"
+        } else {
+            return self.description
+        }
+    }
+
     var components: (red: CGFloat, green: CGFloat, blue: CGFloat, opacity: CGFloat) {
         var r: CGFloat = 0
         var g: CGFloat = 0

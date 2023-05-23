@@ -20,6 +20,7 @@ struct ContentView: View {
     @State private var isOn: Bool = true
     @State private var showCode: Bool = false
     @State private var setEffect: Bool = false
+    @AppStorage("showAlpha") private var showAlpha: Bool = false
 
     var toolbarBG: Color {
         return selectedColor.darker(by: 5)
@@ -37,16 +38,26 @@ struct ContentView: View {
             VStack {
                 if let parts = NSColor(selectedColor).cgColor.components {
                     HStack {
-                        ColorPicker("", selection: $selectedColor)
-                        Button("Save Image") {
-                            openWindow(value: selectedColor)
+                        Button("Pick Color") {
+                            Task {
+                                if let color = await NSColorSampler().sample() {
+                                    selectedColor = Color(nsColor: color)
+                                    setToPasteboard()
+                                }
+                            }
                         }
-
-                        Button("Copy", action: {
-                            setToPasteboard()
-                        })
                         .offset(y: setEffect ? 3 : 0)
                         .animation(stiffBouncyAnimation, value: setEffect)
+
+                        // Button("Save Image") {
+                        //     openWindow(value: selectedColor)
+                        // }
+                        //
+                        // Button("Copy", action: {
+                        //     setToPasteboard()
+                        // })
+                        // .offset(y: setEffect ? 3 : 0)
+                        // .animation(stiffBouncyAnimation, value: setEffect)
                     }
 
                     if showCode {
@@ -90,6 +101,14 @@ struct ContentView: View {
                             .toggleStyle(.switch)
                     }
                 })
+
+                ToolbarItem(placement: .automatic, content: {
+                    HStack {
+                        Text("Show Alpha")
+                        Toggle("Show Alpha", isOn: $showAlpha)
+                            .toggleStyle(.switch)
+                    }
+                })
             }
             .animation(bouncyAnimation, value: selectedColor)
             .animation(bouncyAnimation, value: isOn)
@@ -118,7 +137,7 @@ struct ContentView: View {
                 setEffect = false
             }
         }
-        let content = selectedColor.pasteboardText
+        let content = showAlpha ? selectedColor.pasteboardTextWithAlpha : selectedColor.pasteboardText
         let pasteboard = NSPasteboard.general
         pasteboard.clearContents()
         pasteboard.setString(content, forType: .string)
