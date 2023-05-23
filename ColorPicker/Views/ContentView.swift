@@ -8,6 +8,7 @@
 import SwiftUI
 import AppKit
 import UniformTypeIdentifiers
+import ViewToAppIconSet
 
 func num(_ result: Double) -> String {
     let value = String(format: "%g", result)
@@ -29,8 +30,6 @@ struct ContentView: View {
     let bouncyAnimation: Animation = .interpolatingSpring(stiffness: 200, damping: 15)
     let stiffBouncyAnimation: Animation = .interpolatingSpring(stiffness: 900, damping: 25)
 
-    @Environment(\.openWindow) private var openWindow
-
     var body: some View {
         ZStack {
             selectedColor
@@ -48,16 +47,6 @@ struct ContentView: View {
                         }
                         .offset(y: setEffect ? 3 : 0)
                         .animation(stiffBouncyAnimation, value: setEffect)
-
-                        // Button("Save Image") {
-                        //     openWindow(value: selectedColor)
-                        // }
-                        //
-                        // Button("Copy", action: {
-                        //     setToPasteboard()
-                        // })
-                        // .offset(y: setEffect ? 3 : 0)
-                        // .animation(stiffBouncyAnimation, value: setEffect)
                     }
 
                     if showCode {
@@ -124,6 +113,7 @@ struct ContentView: View {
     }
 
     func setDockIcon(_ color: Color) {
+        
         let dockView = AppIcon(size: 130, color: color) //.frame(width: 512, height: 512)
         NSApp.dockTile.contentView = NSHostingView(rootView: dockView)
         NSApp.dockTile.display()

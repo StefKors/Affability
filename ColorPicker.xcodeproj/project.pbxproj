@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8A060369299BEE760089B5E6 /* Color+AppStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A060368299BEE760089B5E6 /* Color+AppStorage.swift */; };
-		8A06036E299C083F0089B5E6 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A06036D299C083F0089B5E6 /* Contents.json */; };
 		8A060374299D013B0089B5E6 /* FormattedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A060373299D013B0089B5E6 /* FormattedView.swift */; };
 		8A060376299D01500089B5E6 /* InlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A060375299D01500089B5E6 /* InlineView.swift */; };
 		8A060378299D022A0089B5E6 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A060377299D022A0089B5E6 /* Color+Extensions.swift */; };
@@ -32,6 +31,7 @@
 		8AC9B5E9299FCB6C003A4D55 /* ios.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9B5DD299FCB6C003A4D55 /* ios.svg */; };
 		8AC9B5EA299FCB6C003A4D55 /* macos.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9B5DE299FCB6C003A4D55 /* macos.svg */; };
 		8AC9B5EB299FCB6C003A4D55 /* tvos-active.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9B5DF299FCB6C003A4D55 /* tvos-active.svg */; };
+		8AD49F8F2A1CE0B400AD5321 /* ViewToAppIconSet in Frameworks */ = {isa = PBXBuildFile; productRef = 8AD49F8E2A1CE0B400AD5321 /* ViewToAppIconSet */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +53,6 @@
 
 /* Begin PBXFileReference section */
 		8A060368299BEE760089B5E6 /* Color+AppStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+AppStorage.swift"; sourceTree = "<group>"; };
-		8A06036D299C083F0089B5E6 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		8A060373299D013B0089B5E6 /* FormattedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattedView.swift; sourceTree = "<group>"; };
 		8A060375299D01500089B5E6 /* InlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineView.swift; sourceTree = "<group>"; };
 		8A060377299D022A0089B5E6 /* Color+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
@@ -88,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AD49F8F2A1CE0B400AD5321 /* ViewToAppIconSet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,14 +108,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8A06036C299C08300089B5E6 /* AppIconSetResources */ = {
-			isa = PBXGroup;
-			children = (
-				8A06036D299C083F0089B5E6 /* Contents.json */,
-			);
-			path = AppIconSetResources;
-			sourceTree = "<group>";
-		};
 		8A97DDA6299BCF29001E25E1 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +133,7 @@
 		8A97DDB1299BCF29001E25E1 /* ColorPicker */ = {
 			isa = PBXGroup;
 			children = (
+				8AD49F8C2A1CE04A00AD5321 /* Extensions */,
 				8AD49F8B2A1CDF0E00AD5321 /* Views */,
 				8A97DDBB299BCF2B001E25E1 /* ColorPicker.entitlements */,
 				8A97DDB2299BCF29001E25E1 /* ColorPickerApp.swift */,
@@ -197,14 +190,20 @@
 		8AD49F8B2A1CDF0E00AD5321 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8A06036C299C08300089B5E6 /* AppIconSetResources */,
-				8A060368299BEE760089B5E6 /* Color+AppStorage.swift */,
 				8A97DDB4299BCF29001E25E1 /* ContentView.swift */,
-				8A060377299D022A0089B5E6 /* Color+Extensions.swift */,
 				8A060373299D013B0089B5E6 /* FormattedView.swift */,
 				8A060375299D01500089B5E6 /* InlineView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8AD49F8C2A1CE04A00AD5321 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8A060368299BEE760089B5E6 /* Color+AppStorage.swift */,
+				8A060377299D022A0089B5E6 /* Color+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +222,9 @@
 			dependencies = (
 			);
 			name = ColorPicker;
+			packageProductDependencies = (
+				8AD49F8E2A1CE0B400AD5321 /* ViewToAppIconSet */,
+			);
 			productName = ColorPicker;
 			productReference = 8A97DDAF299BCF29001E25E1 /* ColorPicker.app */;
 			productType = "com.apple.product-type.application";
@@ -295,6 +297,9 @@
 				Base,
 			);
 			mainGroup = 8A97DDA6299BCF29001E25E1;
+			packageReferences = (
+				8AD49F8D2A1CE0B400AD5321 /* XCRemoteSwiftPackageReference "ViewToAppIconSet" */,
+			);
 			productRefGroup = 8A97DDB0299BCF29001E25E1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -313,7 +318,6 @@
 			files = (
 				8A97DDBA299BCF2B001E25E1 /* Preview Assets.xcassets in Resources */,
 				8A97DDB7299BCF2B001E25E1 /* Assets.xcassets in Resources */,
-				8A06036E299C083F0089B5E6 /* Contents.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,6 +676,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8AD49F8D2A1CE0B400AD5321 /* XCRemoteSwiftPackageReference "ViewToAppIconSet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:StefKors/ViewToAppIconSet.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8AD49F8E2A1CE0B400AD5321 /* ViewToAppIconSet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8AD49F8D2A1CE0B400AD5321 /* XCRemoteSwiftPackageReference "ViewToAppIconSet" */;
+			productName = ViewToAppIconSet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8A97DDA7299BCF29001E25E1 /* Project object */;
 }

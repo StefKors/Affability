@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "viewtoappiconset",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:StefKors/ViewToAppIconSet.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "5deffe2a68668dd9f4f4f5a223bc1e5bb1cd80b5"
+      }
+    }
+  ],
+  "version" : 2
+}
