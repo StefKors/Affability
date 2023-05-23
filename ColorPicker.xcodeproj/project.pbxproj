@@ -32,6 +32,8 @@
 		8AC9B5EA299FCB6C003A4D55 /* macos.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9B5DE299FCB6C003A4D55 /* macos.svg */; };
 		8AC9B5EB299FCB6C003A4D55 /* tvos-active.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9B5DF299FCB6C003A4D55 /* tvos-active.svg */; };
 		8AD49F8F2A1CE0B400AD5321 /* ViewToAppIconSet in Frameworks */ = {isa = PBXBuildFile; productRef = 8AD49F8E2A1CE0B400AD5321 /* ViewToAppIconSet */; };
+		8AD49F912A1CE1EE00AD5321 /* AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD49F902A1CE1EE00AD5321 /* AppIcon.swift */; };
+		8AF9CA612A1D037800C23CF9 /* MenubarLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF9CA602A1D037800C23CF9 /* MenubarLabelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		8AC9B5DD299FCB6C003A4D55 /* ios.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ios.svg; sourceTree = "<group>"; };
 		8AC9B5DE299FCB6C003A4D55 /* macos.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = macos.svg; sourceTree = "<group>"; };
 		8AC9B5DF299FCB6C003A4D55 /* tvos-active.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "tvos-active.svg"; sourceTree = "<group>"; };
+		8AD49F902A1CE1EE00AD5321 /* AppIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIcon.swift; sourceTree = "<group>"; };
+		8AF9CA602A1D037800C23CF9 /* MenubarLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenubarLabelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +197,8 @@
 				8A97DDB4299BCF29001E25E1 /* ContentView.swift */,
 				8A060373299D013B0089B5E6 /* FormattedView.swift */,
 				8A060375299D01500089B5E6 /* InlineView.swift */,
+				8AD49F902A1CE1EE00AD5321 /* AppIcon.swift */,
+				8AF9CA602A1D037800C23CF9 /* MenubarLabelView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -359,7 +365,9 @@
 				8A060369299BEE760089B5E6 /* Color+AppStorage.swift in Sources */,
 				8A060374299D013B0089B5E6 /* FormattedView.swift in Sources */,
 				8A060376299D01500089B5E6 /* InlineView.swift in Sources */,
+				8AD49F912A1CE1EE00AD5321 /* AppIcon.swift in Sources */,
 				8A060378299D022A0089B5E6 /* Color+Extensions.swift in Sources */,
+				8AF9CA612A1D037800C23CF9 /* MenubarLabelView.swift in Sources */,
 				8A97DDB3299BCF29001E25E1 /* ColorPickerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

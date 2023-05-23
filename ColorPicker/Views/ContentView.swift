@@ -16,48 +16,35 @@ func num(_ result: Double) -> String {
 }
 
 struct ContentView: View {
-    @AppStorage("Color") private var selectedColor = Color(.sRGB, red: 0.98, green: 0.9, blue: 0.2)
-    // @State private var selectedColor: Color = .orange
-    @State private var isOn: Bool = true
-    @State private var showCode: Bool = false
-    @State private var setEffect: Bool = false
-    @AppStorage("showAlpha") private var showAlpha: Bool = false
-
-    var toolbarBG: Color {
-        return selectedColor.darker(by: 5)
-    }
-
-    let bouncyAnimation: Animation = .interpolatingSpring(stiffness: 200, damping: 15)
-    let stiffBouncyAnimation: Animation = .interpolatingSpring(stiffness: 900, damping: 25)
+    @EnvironmentObject private var model: Model
 
     var body: some View {
         ZStack {
-            selectedColor
+            model.selectedColor
 
             VStack {
-                if let parts = NSColor(selectedColor).cgColor.components {
+                if let parts = NSColor(model.selectedColor).cgColor.components {
                     HStack {
                         Button("Pick Color") {
                             Task {
                                 if let color = await NSColorSampler().sample() {
-                                    selectedColor = Color(nsColor: color)
-                                    setToPasteboard()
+                                    model.selectedColor = Color(nsColor: color)
                                 }
                             }
                         }
-                        .offset(y: setEffect ? 3 : 0)
-                        .animation(stiffBouncyAnimation, value: setEffect)
+                        .offset(y: model.setEffect ? 3 : 0)
+                        .animation(model.stiffBouncyAnimation, value: model.setEffect)
                     }
 
-                    if showCode {
+                    if model.showCode {
                         Group {
-                            if isOn {
+                            if model.isOn {
                                 FormattedView(parts: parts)
                             } else {
                                 InlineView(parts: parts)
                             }
                         }
-                        .transition(.scale.animation(bouncyAnimation).combined(with: .opacity.animation(bouncyAnimation)))
+                        .transition(.scale.animation(model.bouncyAnimation).combined(with: .opacity.animation(model.bouncyAnimation)))
                         .background(
                             RoundedRectangle(cornerRadius: 6)
                                 .stroke(.secondary.opacity(0.4))
@@ -74,7 +61,7 @@ struct ContentView: View {
                             ToolbarItem(placement: .automatic, content: {
                                 HStack {
                                     Text("Formatted")
-                                    Toggle("Formatted", isOn: $isOn)
+                                    Toggle("Formatted", isOn: $model.isOn)
                                         .toggleStyle(.switch)
                                 }
                             })
@@ -86,7 +73,7 @@ struct ContentView: View {
                 ToolbarItem(placement: .automatic, content: {
                     HStack {
                         Text("Show Code")
-                        Toggle("Show Code", isOn: $showCode)
+                        Toggle("Show Code", isOn: $model.showCode)
                             .toggleStyle(.switch)
                     }
                 })
@@ -94,45 +81,26 @@ struct ContentView: View {
                 ToolbarItem(placement: .automatic, content: {
                     HStack {
                         Text("Show Alpha")
-                        Toggle("Show Alpha", isOn: $showAlpha)
+                        Toggle("Show Alpha", isOn: $model.showAlpha)
                             .toggleStyle(.switch)
                     }
                 })
             }
-            .animation(bouncyAnimation, value: selectedColor)
-            .animation(bouncyAnimation, value: isOn)
-            .navigationSubtitle(selectedColor.pasteboardText)
-            .toolbarBackground(toolbarBG, for: .windowToolbar)
-            .onChange(of: selectedColor, perform: { newColor in
-                setDockIcon(newColor)
-            })
+            .animation(model.bouncyAnimation, value: model.selectedColor)
+            .animation(model.bouncyAnimation, value: model.isOn)
+            .navigationSubtitle(model.selectedColor.pasteboardText)
+            .toolbarBackground(model.toolbarBG, for: .windowToolbar)
+            // .onChange(of: model.selectedColor, perform: { _ in
+            //     setToPasteboard()
+            //     updateDockIcon()
+            // })
             .task {
-                setDockIcon(selectedColor)
+                model.initDockIcon()
+                model.setToPasteboard()
             }
         }
     }
 
-    func setDockIcon(_ color: Color) {
-        
-        let dockView = AppIcon(size: 130, color: color) //.frame(width: 512, height: 512)
-        NSApp.dockTile.contentView = NSHostingView(rootView: dockView)
-        NSApp.dockTile.display()
-    }
-
-    func setToPasteboard() {
-        withAnimation(bouncyAnimation) {
-            setEffect = true
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(120)) {
-                setEffect = false
-            }
-        }
-        let content = showAlpha ? selectedColor.pasteboardTextWithAlpha : selectedColor.pasteboardText
-        let pasteboard = NSPasteboard.general
-        pasteboard.clearContents()
-        pasteboard.setString(content, forType: .string)
-        pasteboard.setString(content, forType: .rtf)
-    }
 }
 
 struct ContentView_Previews: PreviewProvider {
