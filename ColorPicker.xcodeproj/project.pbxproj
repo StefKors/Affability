@@ -8,10 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8A060369299BEE760089B5E6 /* Color+AppStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A060368299BEE760089B5E6 /* Color+AppStorage.swift */; };
-		8A06036B299BEF710089B5E6 /* AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A06036A299BEF710089B5E6 /* AppIcon.swift */; };
 		8A06036E299C083F0089B5E6 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A06036D299C083F0089B5E6 /* Contents.json */; };
-		8A060370299CFA680089B5E6 /* AppIconContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A06036F299CFA680089B5E6 /* AppIconContentView.swift */; };
-		8A060372299D011F0089B5E6 /* AppIconSetMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A060371299D011F0089B5E6 /* AppIconSetMaker.swift */; };
 		8A060374299D013B0089B5E6 /* FormattedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A060373299D013B0089B5E6 /* FormattedView.swift */; };
 		8A060376299D01500089B5E6 /* InlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A060375299D01500089B5E6 /* InlineView.swift */; };
 		8A060378299D022A0089B5E6 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A060377299D022A0089B5E6 /* Color+Extensions.swift */; };
@@ -22,7 +19,6 @@
 		8A97DDC5299BCF2B001E25E1 /* ColorPickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A97DDC4299BCF2B001E25E1 /* ColorPickerTests.swift */; };
 		8A97DDCF299BCF2B001E25E1 /* ColorPickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A97DDCE299BCF2B001E25E1 /* ColorPickerUITests.swift */; };
 		8A97DDD1299BCF2B001E25E1 /* ColorPickerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A97DDD0299BCF2B001E25E1 /* ColorPickerUITestsLaunchTests.swift */; };
-		8AC44F032A080FB20016FFEC /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC44F022A080FB20016FFEC /* Haptics.swift */; };
 		8AC9B5D2299FCAF3003A4D55 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9B5D1299FCAF3003A4D55 /* README.md */; };
 		8AC9B5E0299FCB6C003A4D55 /* Screenshot-dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9B5D4299FCB6C003A4D55 /* Screenshot-dark.png */; };
 		8AC9B5E1299FCB6C003A4D55 /* watchos.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9B5D5299FCB6C003A4D55 /* watchos.svg */; };
@@ -57,10 +53,7 @@
 
 /* Begin PBXFileReference section */
 		8A060368299BEE760089B5E6 /* Color+AppStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+AppStorage.swift"; sourceTree = "<group>"; };
-		8A06036A299BEF710089B5E6 /* AppIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIcon.swift; sourceTree = "<group>"; };
 		8A06036D299C083F0089B5E6 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
-		8A06036F299CFA680089B5E6 /* AppIconContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconContentView.swift; sourceTree = "<group>"; };
-		8A060371299D011F0089B5E6 /* AppIconSetMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconSetMaker.swift; sourceTree = "<group>"; };
 		8A060373299D013B0089B5E6 /* FormattedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattedView.swift; sourceTree = "<group>"; };
 		8A060375299D01500089B5E6 /* InlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineView.swift; sourceTree = "<group>"; };
 		8A060377299D022A0089B5E6 /* Color+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
@@ -75,7 +68,6 @@
 		8A97DDCA299BCF2B001E25E1 /* ColorPickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorPickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A97DDCE299BCF2B001E25E1 /* ColorPickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerUITests.swift; sourceTree = "<group>"; };
 		8A97DDD0299BCF2B001E25E1 /* ColorPickerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		8AC44F022A080FB20016FFEC /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
 		8AC9B5D1299FCAF3003A4D55 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8AC9B5D4299FCB6C003A4D55 /* Screenshot-dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot-dark.png"; sourceTree = "<group>"; };
 		8AC9B5D5299FCB6C003A4D55 /* watchos.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = watchos.svg; sourceTree = "<group>"; };
@@ -206,13 +198,9 @@
 			isa = PBXGroup;
 			children = (
 				8A06036C299C08300089B5E6 /* AppIconSetResources */,
-				8A06036A299BEF710089B5E6 /* AppIcon.swift */,
 				8A060368299BEE760089B5E6 /* Color+AppStorage.swift */,
-				8A06036F299CFA680089B5E6 /* AppIconContentView.swift */,
 				8A97DDB4299BCF29001E25E1 /* ContentView.swift */,
-				8AC44F022A080FB20016FFEC /* Haptics.swift */,
 				8A060377299D022A0089B5E6 /* Color+Extensions.swift */,
-				8A060371299D011F0089B5E6 /* AppIconSetMaker.swift */,
 				8A060373299D013B0089B5E6 /* FormattedView.swift */,
 				8A060375299D01500089B5E6 /* InlineView.swift */,
 			);
@@ -365,12 +353,8 @@
 			files = (
 				8A97DDB5299BCF29001E25E1 /* ContentView.swift in Sources */,
 				8A060369299BEE760089B5E6 /* Color+AppStorage.swift in Sources */,
-				8AC44F032A080FB20016FFEC /* Haptics.swift in Sources */,
 				8A060374299D013B0089B5E6 /* FormattedView.swift in Sources */,
-				8A06036B299BEF710089B5E6 /* AppIcon.swift in Sources */,
-				8A060370299CFA680089B5E6 /* AppIconContentView.swift in Sources */,
 				8A060376299D01500089B5E6 /* InlineView.swift in Sources */,
-				8A060372299D011F0089B5E6 /* AppIconSetMaker.swift in Sources */,
 				8A060378299D022A0089B5E6 /* Color+Extensions.swift in Sources */,
 				8A97DDB3299BCF29001E25E1 /* ColorPickerApp.swift in Sources */,
 			);
