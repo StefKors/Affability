@@ -16,7 +16,8 @@ struct MenubarLabelView: View {
             .overlay(content: {
                 RoundedRectangle(cornerRadius: 3, style: .continuous)
                     .stroke(lineWidth: 1)
-                    .foregroundStyle(.primary)
+                    .foregroundStyle(.background)
+                    .opacity(0.3)
             })
             .padding(3)
             .frame(width: 20, height: 20)
