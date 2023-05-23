@@ -58,7 +58,7 @@
 		8A060373299D013B0089B5E6 /* FormattedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattedView.swift; sourceTree = "<group>"; };
 		8A060375299D01500089B5E6 /* InlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineView.swift; sourceTree = "<group>"; };
 		8A060377299D022A0089B5E6 /* Color+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
-		8A97DDAF299BCF29001E25E1 /* ColorPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A97DDAF299BCF29001E25E1 /* Affability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Affability.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A97DDB2299BCF29001E25E1 /* ColorPickerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerApp.swift; sourceTree = "<group>"; };
 		8A97DDB4299BCF29001E25E1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8A97DDB6299BCF2B001E25E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 		8A97DDB0299BCF29001E25E1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8A97DDAF299BCF29001E25E1 /* ColorPicker.app */,
+				8A97DDAF299BCF29001E25E1 /* Affability.app */,
 				8A97DDC0299BCF2B001E25E1 /* ColorPickerTests.xctest */,
 				8A97DDCA299BCF2B001E25E1 /* ColorPickerUITests.xctest */,
 			);
@@ -232,7 +232,7 @@
 				8AD49F8E2A1CE0B400AD5321 /* ViewToAppIconSet */,
 			);
 			productName = ColorPicker;
-			productReference = 8A97DDAF299BCF29001E25E1 /* ColorPicker.app */;
+			productReference = 8A97DDAF299BCF29001E25E1 /* Affability.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8A97DDBF299BCF2B001E25E1 /* ColorPickerTests */ = {
@@ -535,6 +535,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Affability;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -542,7 +544,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stefkors.ColorPicker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Affability;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -563,6 +565,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Affability;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -570,7 +574,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stefkors.ColorPicker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Affability;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
