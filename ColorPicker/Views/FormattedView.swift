@@ -60,7 +60,6 @@ struct FormattedView: View {
                 }
             }
         }
-        .scenePadding()
         .monospaced()
     }
 }

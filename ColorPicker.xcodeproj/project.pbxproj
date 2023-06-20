@@ -18,6 +18,8 @@
 		8A97DDC5299BCF2B001E25E1 /* ColorPickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A97DDC4299BCF2B001E25E1 /* ColorPickerTests.swift */; };
 		8A97DDCF299BCF2B001E25E1 /* ColorPickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A97DDCE299BCF2B001E25E1 /* ColorPickerUITests.swift */; };
 		8A97DDD1299BCF2B001E25E1 /* ColorPickerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A97DDD0299BCF2B001E25E1 /* ColorPickerUITestsLaunchTests.swift */; };
+		8AC788852A409CA700E2F862 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC788842A409CA700E2F862 /* MenuItemView.swift */; };
+		8AC788872A40B84F00E2F862 /* HistoryColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC788862A40B84F00E2F862 /* HistoryColorView.swift */; };
 		8AC9B5D2299FCAF3003A4D55 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9B5D1299FCAF3003A4D55 /* README.md */; };
 		8AC9B5E0299FCB6C003A4D55 /* Screenshot-dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9B5D4299FCB6C003A4D55 /* Screenshot-dark.png */; };
 		8AC9B5E1299FCB6C003A4D55 /* watchos.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9B5D5299FCB6C003A4D55 /* watchos.svg */; };
@@ -69,6 +71,8 @@
 		8A97DDCA299BCF2B001E25E1 /* ColorPickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorPickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A97DDCE299BCF2B001E25E1 /* ColorPickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerUITests.swift; sourceTree = "<group>"; };
 		8A97DDD0299BCF2B001E25E1 /* ColorPickerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8AC788842A409CA700E2F862 /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
+		8AC788862A40B84F00E2F862 /* HistoryColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryColorView.swift; sourceTree = "<group>"; };
 		8AC9B5D1299FCAF3003A4D55 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8AC9B5D4299FCB6C003A4D55 /* Screenshot-dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot-dark.png"; sourceTree = "<group>"; };
 		8AC9B5D5299FCB6C003A4D55 /* watchos.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = watchos.svg; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 		8AC9B5DE299FCB6C003A4D55 /* macos.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = macos.svg; sourceTree = "<group>"; };
 		8AC9B5DF299FCB6C003A4D55 /* tvos-active.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "tvos-active.svg"; sourceTree = "<group>"; };
 		8AD49F902A1CE1EE00AD5321 /* AppIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIcon.swift; sourceTree = "<group>"; };
+		8AE1ED322A41B116009CB250 /* EPPPalette.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = EPPPalette.usdz; sourceTree = "<group>"; };
 		8AF9CA602A1D037800C23CF9 /* MenubarLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenubarLabelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,6 +142,7 @@
 		8A97DDB1299BCF29001E25E1 /* ColorPicker */ = {
 			isa = PBXGroup;
 			children = (
+				8AE1ED322A41B116009CB250 /* EPPPalette.usdz */,
 				8AD49F8C2A1CE04A00AD5321 /* Extensions */,
 				8AD49F8B2A1CDF0E00AD5321 /* Views */,
 				8A97DDBB299BCF2B001E25E1 /* ColorPicker.entitlements */,
@@ -195,10 +201,12 @@
 			isa = PBXGroup;
 			children = (
 				8A97DDB4299BCF29001E25E1 /* ContentView.swift */,
+				8AC788862A40B84F00E2F862 /* HistoryColorView.swift */,
 				8A060373299D013B0089B5E6 /* FormattedView.swift */,
 				8A060375299D01500089B5E6 /* InlineView.swift */,
 				8AD49F902A1CE1EE00AD5321 /* AppIcon.swift */,
 				8AF9CA602A1D037800C23CF9 /* MenubarLabelView.swift */,
+				8AC788842A409CA700E2F862 /* MenuItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -362,12 +370,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A97DDB5299BCF29001E25E1 /* ContentView.swift in Sources */,
+				8AC788872A40B84F00E2F862 /* HistoryColorView.swift in Sources */,
 				8A060369299BEE760089B5E6 /* Color+AppStorage.swift in Sources */,
 				8A060374299D013B0089B5E6 /* FormattedView.swift in Sources */,
 				8A060376299D01500089B5E6 /* InlineView.swift in Sources */,
 				8AD49F912A1CE1EE00AD5321 /* AppIcon.swift in Sources */,
 				8A060378299D022A0089B5E6 /* Color+Extensions.swift in Sources */,
 				8AF9CA612A1D037800C23CF9 /* MenubarLabelView.swift in Sources */,
+				8AC788852A409CA700E2F862 /* MenuItemView.swift in Sources */,
 				8A97DDB3299BCF29001E25E1 /* ColorPickerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,7 +466,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -511,7 +521,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -542,6 +552,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stefkors.ColorPicker;
 				PRODUCT_NAME = Affability;
@@ -572,6 +583,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stefkors.ColorPicker;
 				PRODUCT_NAME = Affability;

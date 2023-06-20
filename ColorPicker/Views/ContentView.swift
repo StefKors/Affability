@@ -15,89 +15,71 @@ func num(_ result: Double) -> String {
     return value
 }
 
+extension ToolbarItemPlacement {
+    static let favoritesBar = accessoryBar(id: "com.example.favorites")
+}
+
+
 struct ContentView: View {
-    @EnvironmentObject private var model: Model
+    @EnvironmentObject private var model: MyAppDelegate
 
     var body: some View {
         ZStack {
+            // Colours the full background
             model.selectedColor
 
             VStack {
-                if let parts = NSColor(model.selectedColor).cgColor.components {
-                    HStack {
-                        Button("Pick Color") {
-                            Task {
-                                if let color = await NSColorSampler().sample() {
-                                    model.selectedColor = Color(nsColor: color)
-                                }
-                            }
+                ScrollView {
+                    VStack {
+                        ForEach(model.colorHistory.sorted(by: { $0.createdAt > $1.createdAt })) { color in
+                            HistoryColorView(color: color)
+                                .transition(.move(edge: .top))
                         }
-                        .offset(y: model.setEffect ? 3 : 0)
-                        .animation(model.stiffBouncyAnimation, value: model.setEffect)
-                    }
+                        .animation(.interpolatingSpring, value: model.colorHistory)
 
-                    if model.showCode {
-                        Group {
-                            if model.isOn {
-                                FormattedView(parts: parts)
-                            } else {
-                                InlineView(parts: parts)
-                            }
-                        }
-                        .transition(.scale.animation(model.bouncyAnimation).combined(with: .opacity.animation(model.bouncyAnimation)))
-                        .background(
-                            RoundedRectangle(cornerRadius: 6)
-                                .stroke(.secondary.opacity(0.4))
-                                .background(
-                                    RoundedRectangle(cornerRadius: 6)
-                                        .fill(.background.opacity(0.6))
-                                )
-                                .shadow(color: .secondary.opacity(0.4), radius: 20)
-                        )
-                        // .frame(width: .infinity)
-                        .fixedSize()
-                        .monospaced()
-                        .toolbar {
-                            ToolbarItem(placement: .automatic, content: {
-                                HStack {
-                                    Text("Formatted")
-                                    Toggle("Formatted", isOn: $model.isOn)
-                                        .toggleStyle(.switch)
+                        if !model.colorHistory.isEmpty {
+                            Button("clear history") {
+                                withAnimation(.spring) {
+                                    model.colorHistory = []
                                 }
-                            })
+                            }
+                            .buttonStyle(.borderless)
                         }
                     }
+                    .scenePadding()
                 }
             }
             .toolbar {
                 ToolbarItem(placement: .automatic, content: {
-                    HStack {
-                        Text("Show Code")
-                        Toggle("Show Code", isOn: $model.showCode)
-                            .toggleStyle(.switch)
-                    }
-                })
+                    Button {
+                        Task {
+                            if let color = await NSColorSampler().sample() {
+                                model.selectedColor = Color(nsColor: color)
 
-                ToolbarItem(placement: .automatic, content: {
-                    HStack {
-                        Text("Show Alpha")
-                        Toggle("Show Alpha", isOn: $model.showAlpha)
-                            .toggleStyle(.switch)
+                                withAnimation(.easeInOut) {
+                                    model.theme = color.windowTheme
+                                }
+                            }
+                        }
+                    } label: {
+                        Label("Pick Color", systemImage: "eyedropper.halffull")
                     }
+                    .offset(y: model.setEffect ? 3 : 0)
+                    .animation(model.stiffBouncyAnimation, value: model.setEffect)
                 })
             }
             .animation(model.bouncyAnimation, value: model.selectedColor)
             .animation(model.bouncyAnimation, value: model.isOn)
             .navigationSubtitle(model.selectedColor.pasteboardText)
             .toolbarBackground(model.toolbarBG, for: .windowToolbar)
-            // .onChange(of: model.selectedColor, perform: { _ in
-            //     setToPasteboard()
-            //     updateDockIcon()
-            // })
             .task {
                 model.initDockIcon()
                 model.setToPasteboard()
+                withAnimation(.easeInOut) {
+                    model.theme = model.selectedColor.windowTheme
+                }
             }
+            .preferredColorScheme(model.theme)
         }
     }
 

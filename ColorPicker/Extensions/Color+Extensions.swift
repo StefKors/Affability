@@ -7,6 +7,29 @@
 
 import SwiftUI
 
+extension Color {
+    func copyToPasteboard() {
+        let content = self.pasteboardText
+        let pasteboard = NSPasteboard.general
+        pasteboard.clearContents()
+        pasteboard.setString(content, forType: .string)
+        pasteboard.setString(content, forType: .rtf)
+
+    }
+}
+
+extension NSColor {
+    var windowTheme: ColorScheme {
+        self.brightnessComponent < 0.5 ? .dark : .light
+    }
+}
+
+extension Color {
+    var windowTheme: ColorScheme {
+        NSColor(self).windowTheme
+    }
+}
+
 // Inspired by https://cocoacasts.com/from-hex-to-uicolor-and-back-in-swift
 // Make Color codable. This includes support for transparency.
 // See https://www.digitalocean.com/community/tutorials/css-hex-code-colors-alpha-values

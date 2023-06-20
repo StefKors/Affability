@@ -43,7 +43,6 @@ struct InlineView: View {
                 Text(")")
             }
         }
-        .scenePadding()
         .monospaced()
     }
 }
