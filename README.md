@@ -1,9 +1,9 @@
 <p align="center">
   <img src="ColorPicker/Assets.xcassets/AppIcon.appiconset/mac1024.png" height="128">
-  <h1 align="center">ColorPicker</h1>
+  <h1 align="center">Affability</h1>
 </p>
 
-![ColorPicker](https://github.com/homescale-software/ColorPicker) is a simple native macOS app for getting the SwiftUI color code from the system color picker. Written in SwiftUI.
+![Affability](https://github.com/StefKors/Affability) is a simple native macOS app for getting the SwiftUI color code from the system color picker. Written in SwiftUI.
 
 #### Supported Platforms
 <p align="left">
@@ -41,7 +41,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="Images/Screenshot-dark.png">
   <source media="(prefers-color-scheme: light)" srcset="Images/Screenshot-light.png">
-  <img alt="Screenshot of Commitment, the native macOS Git Interface" src="Images/Screenshot-light.png">
+  <img alt="Screenshot of the app" src="Images/Screenshot-light.png">
 </picture>
 
 -------

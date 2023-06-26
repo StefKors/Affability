@@ -19,6 +19,8 @@ struct MenuItemView: View {
     }
 }
 
-#Preview {
-    MenuItemView(label: "Color RGB")
+struct MenuItemView_Previews: PreviewProvider {
+    static var previews: some View {
+        MenuItemView(label: "Color RGB")
+    }
 }

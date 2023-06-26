@@ -15,6 +15,10 @@ struct HistoricalColor: Codable, Identifiable, Equatable {
     let value: Color
 }
 
+extension HistoricalColor {
+    static let preview = HistoricalColor(id: "test", createdAt: Date(timeIntervalSince1970: 200), value: .accentColor)
+}
+
 extension Color: RawRepresentable {
     public init?(rawValue: String) {
         guard let data = Data(base64Encoded: rawValue) else{

@@ -78,6 +78,8 @@ struct HistoryColorView: View {
     }
 }
 
-#Preview {
-    HistoryColorView(color: HistoricalColor(id: "test", createdAt: Date(timeIntervalSince1970: 200), value: .accentColor))
+struct HistoryColorView_Previews: PreviewProvider {
+    static var previews: some View {
+        HistoryColorView(color: HistoricalColor.preview)
+    }
 }
