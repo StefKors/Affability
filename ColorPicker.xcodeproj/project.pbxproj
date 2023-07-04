@@ -71,6 +71,7 @@
 		8A97DDCA299BCF2B001E25E1 /* ColorPickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorPickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A97DDCE299BCF2B001E25E1 /* ColorPickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerUITests.swift; sourceTree = "<group>"; };
 		8A97DDD0299BCF2B001E25E1 /* ColorPickerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8AC562742A5429420014281B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8AC788842A409CA700E2F862 /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
 		8AC788862A40B84F00E2F862 /* HistoryColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryColorView.swift; sourceTree = "<group>"; };
 		8AC9B5D1299FCAF3003A4D55 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -142,6 +143,7 @@
 		8A97DDB1299BCF29001E25E1 /* ColorPicker */ = {
 			isa = PBXGroup;
 			children = (
+				8AC562742A5429420014281B /* Info.plist */,
 				8AE1ED322A41B116009CB250 /* EPPPalette.usdz */,
 				8AD49F8C2A1CE04A00AD5321 /* Extensions */,
 				8AD49F8B2A1CDF0E00AD5321 /* Views */,
@@ -545,6 +547,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ColorPicker/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Affability;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -576,6 +579,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ColorPicker/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Affability;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
