@@ -34,7 +34,7 @@ struct ContentView: View {
 
                         if !model.colorHistory.isEmpty {
                             Button("clear history") {
-                                withAnimation(.spring) {
+                                withAnimation(.spring()) {
                                     model.colorHistory = []
                                 }
                             }
