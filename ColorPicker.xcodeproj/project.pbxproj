@@ -21,18 +21,6 @@
 		8AC788852A409CA700E2F862 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC788842A409CA700E2F862 /* MenuItemView.swift */; };
 		8AC788872A40B84F00E2F862 /* HistoryColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC788862A40B84F00E2F862 /* HistoryColorView.swift */; };
 		8AC9B5D2299FCAF3003A4D55 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9B5D1299FCAF3003A4D55 /* README.md */; };
-		8AC9B5E0299FCB6C003A4D55 /* Screenshot-dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9B5D4299FCB6C003A4D55 /* Screenshot-dark.png */; };
-		8AC9B5E1299FCB6C003A4D55 /* watchos.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9B5D5299FCB6C003A4D55 /* watchos.svg */; };
-		8AC9B5E2299FCB6C003A4D55 /* ipados-active.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9B5D6299FCB6C003A4D55 /* ipados-active.svg */; };
-		8AC9B5E3299FCB6C003A4D55 /* Screenshot-light.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9B5D7299FCB6C003A4D55 /* Screenshot-light.png */; };
-		8AC9B5E4299FCB6C003A4D55 /* ios-active.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9B5D8299FCB6C003A4D55 /* ios-active.svg */; };
-		8AC9B5E5299FCB6C003A4D55 /* watchos-active.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9B5D9299FCB6C003A4D55 /* watchos-active.svg */; };
-		8AC9B5E6299FCB6C003A4D55 /* tvos.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9B5DA299FCB6C003A4D55 /* tvos.svg */; };
-		8AC9B5E7299FCB6C003A4D55 /* ipados.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9B5DB299FCB6C003A4D55 /* ipados.svg */; };
-		8AC9B5E8299FCB6C003A4D55 /* macos-active.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9B5DC299FCB6C003A4D55 /* macos-active.svg */; };
-		8AC9B5E9299FCB6C003A4D55 /* ios.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9B5DD299FCB6C003A4D55 /* ios.svg */; };
-		8AC9B5EA299FCB6C003A4D55 /* macos.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9B5DE299FCB6C003A4D55 /* macos.svg */; };
-		8AC9B5EB299FCB6C003A4D55 /* tvos-active.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9B5DF299FCB6C003A4D55 /* tvos-active.svg */; };
 		8AD49F8F2A1CE0B400AD5321 /* ViewToAppIconSet in Frameworks */ = {isa = PBXBuildFile; productRef = 8AD49F8E2A1CE0B400AD5321 /* ViewToAppIconSet */; };
 		8AD49F912A1CE1EE00AD5321 /* AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD49F902A1CE1EE00AD5321 /* AppIcon.swift */; };
 		8AF9CA612A1D037800C23CF9 /* MenubarLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF9CA602A1D037800C23CF9 /* MenubarLabelView.swift */; };
@@ -72,6 +60,10 @@
 		8A97DDCE299BCF2B001E25E1 /* ColorPickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerUITests.swift; sourceTree = "<group>"; };
 		8A97DDD0299BCF2B001E25E1 /* ColorPickerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8AC562742A5429420014281B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8AC562752A54787B0014281B /* Screenshot-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot-2.png"; sourceTree = "<group>"; };
+		8AC562762A54787B0014281B /* Screenshot-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot-3.png"; sourceTree = "<group>"; };
+		8AC562772A54787B0014281B /* Screenshot-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot-4.png"; sourceTree = "<group>"; };
+		8AC562782A54787B0014281B /* Screenshot-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot-1.png"; sourceTree = "<group>"; };
 		8AC788842A409CA700E2F862 /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
 		8AC788862A40B84F00E2F862 /* HistoryColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryColorView.swift; sourceTree = "<group>"; };
 		8AC9B5D1299FCAF3003A4D55 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -183,6 +175,10 @@
 		8AC9B5D3299FCB6C003A4D55 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				8AC562782A54787B0014281B /* Screenshot-1.png */,
+				8AC562752A54787B0014281B /* Screenshot-2.png */,
+				8AC562762A54787B0014281B /* Screenshot-3.png */,
+				8AC562772A54787B0014281B /* Screenshot-4.png */,
 				8AC9B5D4299FCB6C003A4D55 /* Screenshot-dark.png */,
 				8AC9B5D5299FCB6C003A4D55 /* watchos.svg */,
 				8AC9B5D6299FCB6C003A4D55 /* ipados-active.svg */,
@@ -348,19 +344,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AC9B5E8299FCB6C003A4D55 /* macos-active.svg in Resources */,
-				8AC9B5E4299FCB6C003A4D55 /* ios-active.svg in Resources */,
-				8AC9B5E2299FCB6C003A4D55 /* ipados-active.svg in Resources */,
-				8AC9B5E6299FCB6C003A4D55 /* tvos.svg in Resources */,
-				8AC9B5E5299FCB6C003A4D55 /* watchos-active.svg in Resources */,
 				8AC9B5D2299FCAF3003A4D55 /* README.md in Resources */,
-				8AC9B5EA299FCB6C003A4D55 /* macos.svg in Resources */,
-				8AC9B5E3299FCB6C003A4D55 /* Screenshot-light.png in Resources */,
-				8AC9B5EB299FCB6C003A4D55 /* tvos-active.svg in Resources */,
-				8AC9B5E0299FCB6C003A4D55 /* Screenshot-dark.png in Resources */,
-				8AC9B5E9299FCB6C003A4D55 /* ios.svg in Resources */,
-				8AC9B5E1299FCB6C003A4D55 /* watchos.svg in Resources */,
-				8AC9B5E7299FCB6C003A4D55 /* ipados.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
