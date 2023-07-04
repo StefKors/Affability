@@ -15,11 +15,6 @@ func num(_ result: Double) -> String {
     return value
 }
 
-extension ToolbarItemPlacement {
-    static let favoritesBar = accessoryBar(id: "com.example.favorites")
-}
-
-
 struct ContentView: View {
     @EnvironmentObject private var model: MyAppDelegate
 
@@ -35,7 +30,7 @@ struct ContentView: View {
                             HistoryColorView(color: color)
                                 .transition(.move(edge: .top))
                         }
-                        .animation(.interpolatingSpring, value: model.colorHistory)
+                        .animation(.interpolatingSpring(stiffness: 300, damping: 15), value: model.colorHistory)
 
                         if !model.colorHistory.isEmpty {
                             Button("clear history") {

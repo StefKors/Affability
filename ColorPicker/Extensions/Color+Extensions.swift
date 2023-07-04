@@ -14,7 +14,6 @@ extension Color {
         pasteboard.clearContents()
         pasteboard.setString(content, forType: .string)
         pasteboard.setString(content, forType: .rtf)
-
     }
 }
 
