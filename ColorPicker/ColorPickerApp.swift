@@ -153,11 +153,11 @@ import AppKit
         }
 
         // set current item
-        if #available(macOS 14.0, *) {
-            anchor.badge = NSMenuItemBadge(string: self.colorStyle.rawValue)
-        } else {
-            // Fallback on earlier versions
-        }
+        // if #available(macOS 14.0, *) {
+        //     anchor.badge = NSMenuItemBadge(string: self.colorStyle.rawValue)
+        // } else {
+        //     // Fallback on earlier versions
+        // }
         statusBarMenu.addItem(anchor)
         statusBarMenu.setSubmenu(submenu, for: anchor)
 
