@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HistoryColorView: View {
+    @EnvironmentObject private var model: MyAppDelegate
     let color: HistoricalColor
 
     @State private var isHovering: Bool = false
@@ -59,7 +60,7 @@ struct HistoryColorView: View {
             .offset(y: setEffect ? 3 : 0)
             .animation(stiffBouncyAnimation, value: setEffect)
             .onTapGesture {
-                color.value.copyToPasteboard()
+                color.value.copyToPasteboard(style: model.colorStyle)
                 withAnimation(stiffBouncyAnimation) {
                     setEffect = true
 

@@ -173,27 +173,27 @@ struct AppIcon: View {
 //             AppIcon(color: Color(red: 0.721545, green: 0.572411, blue: 0.709819))
 //                 .iconStyle(.macOS)
 //                 .frame(width: 512, height: 512)
-//             Button("generate") {
-//                 do {
-//                     let iconView = AppIcon(color: Color(red: 0.721545, green: 0.572411, blue: 0.709819))
-//                     // .iconStyle(.macOS)
-//                     // .frame(width: 512, height: 512)
-//                     let renderer = ImageRenderer(content: iconView)
-//                     // renderer.scale = 1.0
-//                     // renderer.proposedSize = .init(width: 120, height: 120)
-//                     guard let image = renderer.nsImage  else { return }
-//                     let folder = NSTemporaryDirectory() + "PreviewIcon/"
-//                     try? FileManager.default.removeItem(atPath: folder)
-//                     try FileManager.default.createDirectory(atPath: folder, withIntermediateDirectories: true)
-//                     let path = folder + "icon.png"
-//                     let imageRep = NSBitmapImageRep(data: image.tiffRepresentation!)
-//                     let pngData = imageRep?.representation(using: .png, properties: [:])
-//                     try pngData?.write(to: URL(filePath: path))
-//                     print(path.description)
-//                 } catch {
-//                     print("error \(error.localizedDescription)")
-//                 }
-//             }
+            // Button("generate") {
+            //     do {
+            //         let iconView = AppIcon(color: Color(red: 0.721545, green: 0.572411, blue: 0.709819))
+            //         // .iconStyle(.macOS)
+            //         // .frame(width: 512, height: 512)
+            //         let renderer = ImageRenderer(content: iconView)
+            //         // renderer.scale = 1.0
+            //         // renderer.proposedSize = .init(width: 120, height: 120)
+            //         guard let image = renderer.nsImage  else { return }
+            //         let folder = NSTemporaryDirectory() + "PreviewIcon/"
+            //         try? FileManager.default.removeItem(atPath: folder)
+            //         try FileManager.default.createDirectory(atPath: folder, withIntermediateDirectories: true)
+            //         let path = folder + "icon.png"
+            //         let imageRep = NSBitmapImageRep(data: image.tiffRepresentation!)
+            //         let pngData = imageRep?.representation(using: .png, properties: [:])
+            //         try pngData?.write(to: URL(filePath: path))
+            //         print(path.description)
+            //     } catch {
+            //         print("error \(error.localizedDescription)")
+            //     }
+            // }
 //         }
 //         .previewDisplayName("grid")
 // 

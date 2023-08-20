@@ -8,8 +8,8 @@
 import SwiftUI
 
 extension Color {
-    func copyToPasteboard() {
-        let content = self.pasteboardText
+    func copyToPasteboard(style: ColorStyle) {
+        let content = self.pasteboardText(style: style)
         let pasteboard = NSPasteboard.general
         pasteboard.clearContents()
         pasteboard.setString(content, forType: .string)
@@ -129,17 +129,16 @@ extension Color: Identifiable {
 
 
 extension Color {
-    var pasteboardTextWithAlpha: String {
-        if let parts = NSColor(self).cgColor.components {
-            return "Color(red: \(num(parts[0])), green: \(num(parts[1])), blue: \(num(parts[2])), alpha: \(num(parts[3])))"
-        } else {
-            return self.description
+    func pasteboardText(style: ColorStyle, withAlpha: Bool = false) -> String {
+        let useAlpha = style == .NSColor || style == .UIColor || withAlpha
+        var styleString = style.rawValue
+        if style == .SwiftUI {
+            styleString = "Color"
         }
-    }
-
-    var pasteboardText: String {
-        if let parts = NSColor(self).cgColor.components {
-            return "Color(red: \(num(parts[0])), green: \(num(parts[1])), blue: \(num(parts[2])))"
+        if useAlpha, let parts = NSColor(self).cgColor.components {
+            return "\(styleString)(red: \(num(parts[0])), green: \(num(parts[1])), blue: \(num(parts[2])), alpha: \(num(parts[3])))"
+        } else if let parts = NSColor(self).cgColor.components {
+            return "\(styleString)(red: \(num(parts[0])), green: \(num(parts[1])), blue: \(num(parts[2])))"
         } else {
             return self.description
         }

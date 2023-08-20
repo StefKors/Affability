@@ -15,6 +15,12 @@ func num(_ result: Double) -> String {
     return value
 }
 
+enum ColorStyle: String, CaseIterable {
+    case SwiftUI
+    case NSColor
+    case UIColor
+}
+
 struct ContentView: View {
     @EnvironmentObject private var model: MyAppDelegate
 
@@ -46,6 +52,16 @@ struct ContentView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .automatic, content: {
+                    Picker("Color style", selection: $model.colorStyle) {
+                        ForEach(ColorStyle.allCases, id: \.rawValue) { style in
+                            Text(style.rawValue).tag(style)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                    .frame(idealWidth: 200)
+                })
+
+                ToolbarItem(placement: .automatic, content: {
                     Button {
                         Task {
                             if let color = await NSColorSampler().sample() {
@@ -65,7 +81,7 @@ struct ContentView: View {
             }
             .animation(model.bouncyAnimation, value: model.selectedColor)
             .animation(model.bouncyAnimation, value: model.isOn)
-            .navigationSubtitle(model.selectedColor.pasteboardText)
+            .navigationSubtitle(model.selectedColor.pasteboardText(style: model.colorStyle, withAlpha: model.showAlpha))
             .toolbarBackground(model.toolbarBG, for: .windowToolbar)
             .task {
                 model.initDockIcon()
