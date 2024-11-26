@@ -25,21 +25,6 @@ struct InspectorContentView: View {
                                 .opacity(0.8)
                         })
                 }
-//                GroupBox(label: Text(style.rawValue).tag(style), content: {
-//                    if let parts = selectedColor.cgColor?.components {
-//                        InlineView(style: style, parts: parts)
-//                            .padding(.vertical, 4)
-//                            .padding(.horizontal, 7)
-//                            .background(.background.opacity(0.7), in: RoundedRectangle(cornerRadius: 6))
-//                            .overlay(content: {
-//                                RoundedRectangle(cornerRadius: 6, style: .continuous)
-//                                    .stroke(lineWidth: 1)
-//                                    .foregroundStyle(.background)
-//                                    .opacity(0.8)
-//                            })
-//                    }
-////                    Text(model.selectedColor.pasteboardText(style: style, withAlpha: model.showAlpha))
-//                })
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)

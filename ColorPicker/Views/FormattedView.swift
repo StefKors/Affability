@@ -96,11 +96,10 @@ struct FormattedView: View {
 struct FormattedView_Previews: PreviewProvider {
     static var previews: some View {
         VStack(alignment: .leading) {
-            FormattedView(style: .SwiftUI, parts: [1, 1, 1, 0.3])
-                .scenePadding()
-
-            FormattedView(style: .Hex, parts: [1, 1, 1, 0.3])
-                .scenePadding()
+            ForEach(ColorStyle.allCases, id: \.rawValue) { style in
+                FormattedView(style: style, parts: [1, 1, 1, 0.3])
+                    .scenePadding()
+            }
         }
         .scenePadding()
     }

@@ -23,11 +23,36 @@ struct InlineView: View {
             case .Hex:
                 HStack(spacing: 0) {
                     HStack(spacing: 0) {
+                        Text("#" + (hex ?? "")).foregroundColor(.green)
+                    }
+                }
+            case .rgb:
+                HStack(spacing: 0) {
+                    HStack(spacing: 0) {
                         Text(style.rawValue).foregroundColor(.red)
+                        if showAlpha {
+                            Text("a").foregroundColor(.red)
+                        }
                         Text("(")
                     }
                     HStack(spacing: 0) {
-                        Text("#" + (hex ?? "")).foregroundColor(.green)
+                        Text(num(parts[0]*255.0)).foregroundColor(.green)
+                    }
+                    HStack(spacing: 0) {
+                        Text(", ")
+                        Text(num(parts[1]*255.0)).foregroundColor(.green)
+                    }
+                    HStack(spacing: 0) {
+                        Text(", ")
+                        Text(num(parts[2]*255.0)).foregroundColor(.green)
+                    }
+                    if showAlpha {
+                        HStack(spacing: 0) {
+                            Text(", ")
+                            Text("alpha").foregroundColor(.blue)
+                            Text(": ")
+                            Text(num(parts[3]*255.0)).foregroundColor(.green)
+                        }
                     }
                     HStack(spacing: 0) {
                         Text(")")
@@ -36,7 +61,7 @@ struct InlineView: View {
             default:
                 HStack(spacing: 0) {
                     HStack(spacing: 0) {
-                        Text("Color").foregroundColor(.red)
+                        Text(style.rawValue).foregroundColor(.red)
                         Text("(")
                     }
                     HStack(spacing: 0) {
@@ -77,11 +102,10 @@ struct InlineView: View {
 struct InlineView_Previews: PreviewProvider {
     static var previews: some View {
         VStack(alignment: .leading) {
-            InlineView(style: .SwiftUI, parts: [1, 1, 1, 0.3])
-                .scenePadding()
-
-            InlineView(style: .Hex, parts: [1, 1, 1, 0.3])
-                .scenePadding()
+            ForEach(ColorStyle.allCases, id: \.rawValue) { style in
+                InlineView(style: style, parts: [1, 1, 1, 0.3])
+                    .padding(4)
+            }
         }
         .scenePadding()
     }

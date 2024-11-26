@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,7 +19,8 @@
 		8A97DDC5299BCF2B001E25E1 /* ColorPickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A97DDC4299BCF2B001E25E1 /* ColorPickerTests.swift */; };
 		8A97DDCF299BCF2B001E25E1 /* ColorPickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A97DDCE299BCF2B001E25E1 /* ColorPickerUITests.swift */; };
 		8A97DDD1299BCF2B001E25E1 /* ColorPickerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A97DDD0299BCF2B001E25E1 /* ColorPickerUITestsLaunchTests.swift */; };
-		8AB0378A2CF60D3A00C13146 /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 8AB037892CF60D3A00C13146 /* BottomSheet */; };
+		8AB037B82CF6122100C13146 /* Num.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB037B72CF6122100C13146 /* Num.swift */; };
+		8AB037BC2CF616C300C13146 /* MyAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB037BB2CF616C300C13146 /* MyAppDelegate.swift */; };
 		8AC788852A409CA700E2F862 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC788842A409CA700E2F862 /* MenuItemView.swift */; };
 		8AC788872A40B84F00E2F862 /* HistoryColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC788862A40B84F00E2F862 /* HistoryColorView.swift */; };
 		8AC9B5D2299FCAF3003A4D55 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9B5D1299FCAF3003A4D55 /* README.md */; };
@@ -62,6 +63,8 @@
 		8A97DDCA299BCF2B001E25E1 /* ColorPickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorPickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A97DDCE299BCF2B001E25E1 /* ColorPickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerUITests.swift; sourceTree = "<group>"; };
 		8A97DDD0299BCF2B001E25E1 /* ColorPickerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8AB037B72CF6122100C13146 /* Num.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Num.swift; sourceTree = "<group>"; };
+		8AB037BB2CF616C300C13146 /* MyAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppDelegate.swift; sourceTree = "<group>"; };
 		8AC562742A5429420014281B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8AC562752A54787B0014281B /* Screenshot-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot-2.png"; sourceTree = "<group>"; };
 		8AC562762A54787B0014281B /* Screenshot-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot-3.png"; sourceTree = "<group>"; };
@@ -87,13 +90,16 @@
 		8AF9CA602A1D037800C23CF9 /* MenubarLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenubarLabelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		8AB037B32CF611F500C13146 /* Model */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Model; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		8A97DDAC299BCF29001E25E1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8AD49F8F2A1CE0B400AD5321 /* ViewToAppIconSet in Frameworks */,
-				8AB0378A2CF60D3A00C13146 /* BottomSheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +146,8 @@
 		8A97DDB1299BCF29001E25E1 /* ColorPicker */ = {
 			isa = PBXGroup;
 			children = (
+				8AB037BB2CF616C300C13146 /* MyAppDelegate.swift */,
+				8AB037B32CF611F500C13146 /* Model */,
 				8AC562742A5429420014281B /* Info.plist */,
 				8AE1ED322A41B116009CB250 /* EPPPalette.usdz */,
 				8AD49F8C2A1CE04A00AD5321 /* Extensions */,
@@ -225,6 +233,7 @@
 		8AD49F8C2A1CE04A00AD5321 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8AB037B72CF6122100C13146 /* Num.swift */,
 				8A060368299BEE760089B5E6 /* Color+AppStorage.swift */,
 				8A060377299D022A0089B5E6 /* Color+Extensions.swift */,
 			);
@@ -246,10 +255,12 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				8AB037B32CF611F500C13146 /* Model */,
+			);
 			name = ColorPicker;
 			packageProductDependencies = (
 				8AD49F8E2A1CE0B400AD5321 /* ViewToAppIconSet */,
-				8AB037892CF60D3A00C13146 /* BottomSheet */,
 			);
 			productName = ColorPicker;
 			productReference = 8A97DDAF299BCF29001E25E1 /* Affability.app */;
@@ -325,7 +336,6 @@
 			mainGroup = 8A97DDA6299BCF29001E25E1;
 			packageReferences = (
 				8AD49F8D2A1CE0B400AD5321 /* XCRemoteSwiftPackageReference "ViewToAppIconSet" */,
-				8AB037872CF60D3200C13146 /* XCRemoteSwiftPackageReference "BottomSheet" */,
 			);
 			productRefGroup = 8A97DDB0299BCF29001E25E1 /* Products */;
 			projectDirPath = "";
@@ -379,6 +389,8 @@
 				8A060378299D022A0089B5E6 /* Color+Extensions.swift in Sources */,
 				8AF9CA612A1D037800C23CF9 /* MenubarLabelView.swift in Sources */,
 				8A4DC8772CDBA14900EAF53C /* InspectorContentView.swift in Sources */,
+				8AB037BC2CF616C300C13146 /* MyAppDelegate.swift in Sources */,
+				8AB037B82CF6122100C13146 /* Num.swift in Sources */,
 				8AC788852A409CA700E2F862 /* MenuItemView.swift in Sources */,
 				8A97DDB3299BCF29001E25E1 /* ColorPickerApp.swift in Sources */,
 			);
@@ -555,7 +567,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stefkors.ColorPicker;
 				PRODUCT_NAME = Affability;
@@ -587,7 +599,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stefkors.ColorPicker;
 				PRODUCT_NAME = Affability;
@@ -714,14 +726,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8AB037872CF60D3200C13146 /* XCRemoteSwiftPackageReference "BottomSheet" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:lucaszischka/BottomSheet.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.1.1;
-			};
-		};
 		8AD49F8D2A1CE0B400AD5321 /* XCRemoteSwiftPackageReference "ViewToAppIconSet" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:StefKors/ViewToAppIconSet.git";
@@ -733,11 +737,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8AB037892CF60D3A00C13146 /* BottomSheet */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8AB037872CF60D3200C13146 /* XCRemoteSwiftPackageReference "BottomSheet" */;
-			productName = BottomSheet;
-		};
 		8AD49F8E2A1CE0B400AD5321 /* ViewToAppIconSet */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8AD49F8D2A1CE0B400AD5321 /* XCRemoteSwiftPackageReference "ViewToAppIconSet" */;
