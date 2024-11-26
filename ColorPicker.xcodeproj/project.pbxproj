@@ -11,6 +11,7 @@
 		8A060374299D013B0089B5E6 /* FormattedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A060373299D013B0089B5E6 /* FormattedView.swift */; };
 		8A060376299D01500089B5E6 /* InlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A060375299D01500089B5E6 /* InlineView.swift */; };
 		8A060378299D022A0089B5E6 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A060377299D022A0089B5E6 /* Color+Extensions.swift */; };
+		8A4DC8772CDBA14900EAF53C /* InspectorContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4DC8762CDBA14900EAF53C /* InspectorContentView.swift */; };
 		8A97DDB3299BCF29001E25E1 /* ColorPickerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A97DDB2299BCF29001E25E1 /* ColorPickerApp.swift */; };
 		8A97DDB5299BCF29001E25E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A97DDB4299BCF29001E25E1 /* ContentView.swift */; };
 		8A97DDB7299BCF2B001E25E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A97DDB6299BCF2B001E25E1 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 		8A97DDC5299BCF2B001E25E1 /* ColorPickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A97DDC4299BCF2B001E25E1 /* ColorPickerTests.swift */; };
 		8A97DDCF299BCF2B001E25E1 /* ColorPickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A97DDCE299BCF2B001E25E1 /* ColorPickerUITests.swift */; };
 		8A97DDD1299BCF2B001E25E1 /* ColorPickerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A97DDD0299BCF2B001E25E1 /* ColorPickerUITestsLaunchTests.swift */; };
+		8AB0378A2CF60D3A00C13146 /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 8AB037892CF60D3A00C13146 /* BottomSheet */; };
 		8AC788852A409CA700E2F862 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC788842A409CA700E2F862 /* MenuItemView.swift */; };
 		8AC788872A40B84F00E2F862 /* HistoryColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC788862A40B84F00E2F862 /* HistoryColorView.swift */; };
 		8AC9B5D2299FCAF3003A4D55 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8AC9B5D1299FCAF3003A4D55 /* README.md */; };
@@ -48,6 +50,7 @@
 		8A060373299D013B0089B5E6 /* FormattedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattedView.swift; sourceTree = "<group>"; };
 		8A060375299D01500089B5E6 /* InlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineView.swift; sourceTree = "<group>"; };
 		8A060377299D022A0089B5E6 /* Color+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		8A4DC8762CDBA14900EAF53C /* InspectorContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectorContentView.swift; sourceTree = "<group>"; };
 		8A97DDAF299BCF29001E25E1 /* Affability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Affability.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A97DDB2299BCF29001E25E1 /* ColorPickerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerApp.swift; sourceTree = "<group>"; };
 		8A97DDB4299BCF29001E25E1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -90,6 +93,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AD49F8F2A1CE0B400AD5321 /* ViewToAppIconSet in Frameworks */,
+				8AB0378A2CF60D3A00C13146 /* BottomSheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +123,7 @@
 				8AC9B5D3299FCB6C003A4D55 /* Images */,
 				8A97DDB0299BCF29001E25E1 /* Products */,
 				8AC9B5D1299FCAF3003A4D55 /* README.md */,
+				8AB037882CF60D3A00C13146 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,6 +177,13 @@
 			path = ColorPickerUITests;
 			sourceTree = "<group>";
 		};
+		8AB037882CF60D3A00C13146 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8AC9B5D3299FCB6C003A4D55 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +210,7 @@
 		8AD49F8B2A1CDF0E00AD5321 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8A4DC8762CDBA14900EAF53C /* InspectorContentView.swift */,
 				8A97DDB4299BCF29001E25E1 /* ContentView.swift */,
 				8AC788862A40B84F00E2F862 /* HistoryColorView.swift */,
 				8A060373299D013B0089B5E6 /* FormattedView.swift */,
@@ -236,6 +249,7 @@
 			name = ColorPicker;
 			packageProductDependencies = (
 				8AD49F8E2A1CE0B400AD5321 /* ViewToAppIconSet */,
+				8AB037892CF60D3A00C13146 /* BottomSheet */,
 			);
 			productName = ColorPicker;
 			productReference = 8A97DDAF299BCF29001E25E1 /* Affability.app */;
@@ -311,6 +325,7 @@
 			mainGroup = 8A97DDA6299BCF29001E25E1;
 			packageReferences = (
 				8AD49F8D2A1CE0B400AD5321 /* XCRemoteSwiftPackageReference "ViewToAppIconSet" */,
+				8AB037872CF60D3200C13146 /* XCRemoteSwiftPackageReference "BottomSheet" */,
 			);
 			productRefGroup = 8A97DDB0299BCF29001E25E1 /* Products */;
 			projectDirPath = "";
@@ -363,6 +378,7 @@
 				8AD49F912A1CE1EE00AD5321 /* AppIcon.swift in Sources */,
 				8A060378299D022A0089B5E6 /* Color+Extensions.swift in Sources */,
 				8AF9CA612A1D037800C23CF9 /* MenubarLabelView.swift in Sources */,
+				8A4DC8772CDBA14900EAF53C /* InspectorContentView.swift in Sources */,
 				8AC788852A409CA700E2F862 /* MenuItemView.swift in Sources */,
 				8A97DDB3299BCF29001E25E1 /* ColorPickerApp.swift in Sources */,
 			);
@@ -698,6 +714,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8AB037872CF60D3200C13146 /* XCRemoteSwiftPackageReference "BottomSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:lucaszischka/BottomSheet.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.1;
+			};
+		};
 		8AD49F8D2A1CE0B400AD5321 /* XCRemoteSwiftPackageReference "ViewToAppIconSet" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:StefKors/ViewToAppIconSet.git";
@@ -709,6 +733,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8AB037892CF60D3A00C13146 /* BottomSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8AB037872CF60D3200C13146 /* XCRemoteSwiftPackageReference "BottomSheet" */;
+			productName = BottomSheet;
+		};
 		8AD49F8E2A1CE0B400AD5321 /* ViewToAppIconSet */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8AD49F8D2A1CE0B400AD5321 /* XCRemoteSwiftPackageReference "ViewToAppIconSet" */;

@@ -33,6 +33,10 @@ extension Color {
 // Make Color codable. This includes support for transparency.
 // See https://www.digitalocean.com/community/tutorials/css-hex-code-colors-alpha-values
 extension Color: Codable {
+    init(parts: [CGFloat]) {
+        self.init(.sRGB, red: parts[0], green: parts[1], blue: parts[2], opacity: parts.count > 3 ? parts[3] : 1)
+    }
+
   init(hex: String) {
     let rgba = hex.toRGBA()
     
@@ -42,7 +46,7 @@ extension Color: Codable {
               blue: Double(rgba.b),
               opacity: Double(rgba.alpha))
   }
-  
+
   public init(from decoder: Decoder) throws {
     let container = try decoder.singleValueContainer()
     let hex = try container.decode(String.self)
@@ -130,6 +134,10 @@ extension Color: Identifiable {
 
 extension Color {
     func pasteboardText(style: ColorStyle, withAlpha: Bool = false) -> String {
+        if style == .Hex {
+            return "#" + (self.toHex(alpha: withAlpha) ?? "")
+        }
+
         let useAlpha = style == .NSColor || style == .UIColor || withAlpha
         var styleString = style.rawValue
         if style == .SwiftUI {
