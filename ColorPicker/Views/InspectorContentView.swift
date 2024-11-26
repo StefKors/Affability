@@ -52,7 +52,6 @@ struct InspectorContentView: View {
         .scenePadding()
 }
 
-
 struct OptionalInspectorViewModifier: ViewModifier {
     var showInspector: Binding<Bool>
 

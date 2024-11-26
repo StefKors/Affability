@@ -31,7 +31,7 @@ struct AppIcon: View {
                                 gradient: Gradient(
                                     colors: [
                                         color.lighter(by: 20),
-                                        color.darker(by: 5),
+                                        color.darker(by: 5)
                                     ]
                                 ),
                                 startPoint: .topTrailing,

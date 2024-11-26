@@ -21,7 +21,7 @@ extension HistoricalColor {
 
 extension Color: RawRepresentable {
     public init?(rawValue: String) {
-        guard let data = Data(base64Encoded: rawValue) else{
+        guard let data = Data(base64Encoded: rawValue) else {
             self = .black
             return
         }

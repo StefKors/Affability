@@ -12,11 +12,11 @@ struct InlineView: View {
 
     var style: ColorStyle = .SwiftUI
     var parts: [CGFloat]
-    
+
     private var hex: String? {
         Color(parts: parts).toHex(alpha: showAlpha)
     }
-    
+
     var body: some View {
         ZStack {
             switch style {
@@ -79,7 +79,7 @@ struct InlineView_Previews: PreviewProvider {
         VStack(alignment: .leading) {
             InlineView(style: .SwiftUI, parts: [1, 1, 1, 0.3])
                 .scenePadding()
-            
+
             InlineView(style: .Hex, parts: [1, 1, 1, 0.3])
                 .scenePadding()
         }

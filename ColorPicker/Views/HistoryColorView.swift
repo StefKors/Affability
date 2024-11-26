@@ -75,7 +75,6 @@ struct HistoryColorView: View {
 
         }
 
-
     }
 }
 

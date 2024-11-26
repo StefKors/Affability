@@ -96,7 +96,6 @@ struct ContentView: View {
                     })
                 }
             }
-
             .animation(model.bouncyAnimation, value: model.selectedColor)
             .animation(model.bouncyAnimation, value: model.isOn)
             .navigationSubtitle(model.selectedColor.pasteboardText(style: model.colorStyle, withAlpha: model.showAlpha))
@@ -137,4 +136,3 @@ struct ContentView_Previews: PreviewProvider {
         .scenePadding()
     }
 }
-
